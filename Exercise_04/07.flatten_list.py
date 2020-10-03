@@ -1,3 +1,2 @@
-list_with_numbers = input().split('|')
-l = [num.split() for num in list_with_numbers]
-print(' '.join([' '.join(l[i]) for i in range(len(l) - 1, -1, -1)]))
+l = [element for num in input().split('|')[::-1] for element in num.split()]
+print(' '.join(l))
