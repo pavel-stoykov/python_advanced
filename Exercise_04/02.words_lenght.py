@@ -1,2 +1,3 @@
 words = input().split(', ')
-print(", ".join([(word, len(word)) for word in words]))
+print(", ".join([f'{word} -> {len(word)}' for word in words]))
+
