@@ -39,7 +39,7 @@ while materials and magic_level:
     elif total_magic_level < 0:
         materials.append(current_magic_level + current_materials)
     elif total_magic_level > 0:
-        materials.appendleft(current_materials + 15)
+        materials.append(current_materials + 15)
 
 if gifts['Doll'] >= 1 and gifts['Wooden train'] >= 1\
         or gifts['Teddy bear'] >= 1 and gifts['Bicycle'] >= 1:
