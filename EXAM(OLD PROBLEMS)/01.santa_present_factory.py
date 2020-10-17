@@ -28,14 +28,15 @@ while materials and magic_level:
         gifts['Teddy bear'] += 1
     elif total_magic_level == BICYCLE:
         gifts['Bicycle'] += 1
+    elif current_magic_level == 0 and current_materials == 0:
+        continue
     elif current_magic_level == 0:
         materials.append(current_materials)
         continue
     elif current_materials == 0:
         magic_level.appendleft(current_magic_level)
         continue
-    elif current_magic_level == 0 and current_materials == 0:
-        continue
+    
     elif total_magic_level < 0:
         materials.append(current_magic_level + current_materials)
     elif total_magic_level > 0:
