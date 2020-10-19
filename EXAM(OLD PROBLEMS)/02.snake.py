@@ -1,15 +1,15 @@
 territory_size = int(input())
 
-snake_territory = [[] for row in range(territory_size)]
+snake_territory = [[list(input())] for row in range(territory_size)]
 
 burrow_position = []
 food_counter = 0
 is_over = False
 
-for row in range(territory_size):
-    line = input()
-    for col in range(territory_size):
-        snake_territory[row].append(line[col])
+# for row in range(territory_size):
+#     line = input()
+#     for col in range(territory_size):
+#         snake_territory[row].append(line[col])
 
 for row in range(territory_size):
     for col in range(territory_size):
