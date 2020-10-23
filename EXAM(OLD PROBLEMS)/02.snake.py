@@ -1,6 +1,6 @@
 territory_size = int(input())
 
-snake_territory = [[list(input())] for row in range(territory_size)]
+snake_territory = [list(input()) for row in range(territory_size)]
 
 burrow_position = []
 food_counter = 0
@@ -39,13 +39,15 @@ while True:
                                     ][new_snake_position[1]] = 'S'
         elif snake_territory[new_snake_position[0]][new_snake_position[1]] == "*":
             food_counter += 1
-            snake_territory[new_snake_position[0]][new_snake_position[1]] = "."
+            snake_territory[new_snake_position[0]][new_snake_position[1]] = "S"
         else:
             snake_territory[new_snake_position[0]][new_snake_position[1]] = 'S'
         snake_territory[current_snake_position[0]
                         ][current_snake_position[1]] = '.'
         current_snake_position = new_snake_position.copy()
     else:
+        snake_territory[current_snake_position[0]
+                        ][current_snake_position[1]] = '.'
         is_over = True
         break
 
@@ -53,6 +55,8 @@ while True:
         snake_territory[current_snake_position[0]
                         ][current_snake_position[1]] = 'S'
         break
+    # for row in snake_territory:
+    #     print(''.join(row))
 
 if is_over:
     print('Game over!')
